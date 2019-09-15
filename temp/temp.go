@@ -1,4 +1,4 @@
-package main
+package temp
 
 import (
 	"fmt"
@@ -10,7 +10,7 @@ import (
 	"github.com/treehouse-projects/go-intro/welcome"
 )
 
-func main() {
+func MainTemp() {
 	fmt.Println(welcome.English)
 	fmt.Println(welcome.Japanese)
 	reversedString := stringutil.Reverse("hello")
