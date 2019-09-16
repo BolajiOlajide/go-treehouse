@@ -1,4 +1,4 @@
-package temp
+package main
 
 import (
 	"fmt"
@@ -10,7 +10,7 @@ import (
 	"github.com/treehouse-projects/go-intro/welcome"
 )
 
-func MainTemp() {
+func main() {
 	fmt.Println(welcome.English)
 	fmt.Println(welcome.Japanese)
 	reversedString := stringutil.Reverse("hello")
@@ -56,6 +56,10 @@ func MainTemp() {
 	// fmt.Println(sqrt2)
 	fmt.Println(checkFile("existent.txt"))
 	// fmt.Println(checkFile("nonexistent.txt")) // catch the error
+	fmt.Println()
+	forLoop()
+	fmt.Println()
+	CountByThrees(3, 9)
 }
 
 func square(number int) int {
@@ -83,4 +87,18 @@ func squareRoot(x float64) (float64, error) {
 		return 0, fmt.Errorf("Can't calculate square root of a -ve number")
 	}
 	return math.Sqrt(x), nil
+}
+
+func forLoop() {
+	for i := 1; i < 5; i++ {
+		fmt.Println(i)
+	}
+}
+
+// CountByThrees function to count by threes
+func CountByThrees(start int, end int) {
+	// YOUR CODE HERE
+	for i := start; i <= end; i += 3 {
+		fmt.Println(i)
+	}
 }
