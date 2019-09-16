@@ -60,6 +60,8 @@ func main() {
 	forLoop()
 	fmt.Println()
 	CountByThrees(3, 9)
+	slices()
+	maps()
 }
 
 func square(number int) int {
@@ -101,4 +103,31 @@ func CountByThrees(start int, end int) {
 	for i := start; i <= end; i += 3 {
 		fmt.Println(i)
 	}
+}
+
+func slices() {
+	fmt.Println()
+	slice := []int{}
+	slice = append(slice, 23, 45, 56)
+	slice = append(slice, 67)
+	fmt.Println(slice)
+}
+
+func maps() {
+	fmt.Println()
+	var ages = map[string]float64{}
+	ages["bolaji"] = 12
+	ages["damisi"] = 13
+	fmt.Println(ages)
+}
+
+// HalfPriceSale get cost of items for half the price
+func HalfPriceSale(prices map[string]float64) map[string]float64 {
+	// YOUR CODE HERE
+	var result = map[string]float64{}
+	for name, price := range prices {
+		result[name] = price / 2
+	}
+
+	return result
 }
